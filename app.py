@@ -38,16 +38,16 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")    
     indicator = parameters.get("Indicators")
 
-    speech = "Your indoor " + indicator + "is "
+    speech = "Your indoor " + indicator + " is "
+
+    if indicator == "temperature":
+	speech += "23 Celsius degree, it's very comfortable now."
 	
-	#if indicator == "temperature":
-	#speech += "23 Celsius degree, it's very comfortable now."
+    else if indicator == "co2":
+	speech += "higher than 1000, please open the window and turn on the air purifier."
 	
-	#else if indicator == "co2":
-	#speech += "higher than 1000, please open the window and turn on the air purifier."
-	
-	#else:
-	#speech += "good, don't worry."
+    else:
+	speech += "good, don't worry."
 		
     # print(json.dumps(item, indent=4))
 
