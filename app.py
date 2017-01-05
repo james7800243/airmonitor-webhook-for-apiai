@@ -19,7 +19,7 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    res = processRequest(req)
+    res = makeWebhookResult(req)
 
     res = json.dumps(res, indent=4)
     # print(res)
@@ -46,7 +46,7 @@ def makeWebhookResult(req):
 	else if indicator == "co2":
 		speech += "higher than 1000, please open the window and turn on the air purifier."
 
-	else
+	else:
 		speech += "good, don't worry."
 		
     # print(json.dumps(item, indent=4))
