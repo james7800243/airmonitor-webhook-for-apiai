@@ -37,8 +37,8 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     indicator = parameters.get("Indicators")
-	
-	speech = "Your indoor " + indicator + "is "
+
+    speech = "Your indoor " + indicator + "is "
 	
 	#if indicator == "temperature":
 	#speech += "23 Celsius degree, it's very comfortable now."
