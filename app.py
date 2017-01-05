@@ -42,8 +42,16 @@ def makeWebhookResult(req):
 
     if indicator == "temperature":
 	speech += "23 Celsius degree, it's very comfortable now."
+    elif indicator == "humidity":
+	speech += "68 percent, you can turn on the dehumidifier."
     elif indicator == "co2":
-	speech += "higher than 1000, please open the window and turn on the air purifier."	
+	speech += "higher than 1000, please open the window and turn on the air purifier."
+    elif indicator == "pm2.5":
+	speech += "less than 100, don't worry."
+    elif indicator == "pm10":
+	speech += "less than 100, don't worry."
+    elif indicator == "tvoc":
+	speech += "less than 300, don't worry."
     else:
 	speech += "good, don't worry."
 		
