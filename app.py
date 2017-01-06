@@ -36,7 +36,7 @@ def processRequest(req):
 def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")    
-    indicator = parameters.get("Sensors")
+    indicator = parameters.get("Sensor_Name")
 
     speech = "Your indoor " + indicator + " is "
 
