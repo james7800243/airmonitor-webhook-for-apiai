@@ -41,7 +41,7 @@ def makeWebhookResult(req):
     speech = "Your indoor " + indicator + " is "
 
     if indicator == "temperature":
-	speech += "23 Celsius degree, it's very comfortable now."
+	speech += "18 Celsius degree, it's a little cool now. If you feel cold, you can turn on the heater."
     elif indicator == "humidity":
 	speech += "68 percent, you can turn on the dehumidifier."
     elif indicator == "co2":
